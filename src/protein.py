@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-# Copyright (c) 2009 Ch. Fufezan.
+# Copyright (c) 2009, 2014 Ch. Fufezan., T. Bald
 # module is distributed under the terms of the GNU General Public License
 
 '''
@@ -38,6 +38,12 @@ import p3d.library
 import p3d.tree
 import p3d.atom
 import p3d.parser
+
+# fix for renamed xrange in python3
+try:
+    xrange
+except NameError:
+    xrange = range
 
 
 hash_list = ['chain','atype','resid','resname','non-aa-resname',\
